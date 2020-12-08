@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -27,13 +28,18 @@ public class MainActivity extends AppCompatActivity {
     private void Cat(){
         Cat murzik = new Cat();
         murzik.name = "Мурзик";
-        murzik.age = 9;
-        murzik.color = Color.BLACK;
+        murzik.age = 3;
+        murzik.color = Color.GREEN;
 
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
         TextView textView = findViewById(R.id.textView);
+        View view = findViewById(R.id.Collor);
         textView.setText(gson.toJson(murzik));
+        String jsonText = gson.toJson(murzik);
+        Cat murzik1 = gson.fromJson(jsonText, Cat.class);
+        textView.setText("Имя: " + murzik1.name + "\nВозраст: " + murzik1.age);
+        view.setBackgroundColor(murzik1.color);
     }
 }
 
