@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Lab 5</string>
+    <string name="task_1">TASK 1</string>
+    <string name="press_me">PRESS ME</string>
+    <string name="hello_world">Hello world!</string>
+</resources>
