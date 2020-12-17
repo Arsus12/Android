@@ -10,6 +10,7 @@ public class Event_Handling extends AppCompatActivity implements View.OnClickLis
 
     Button btnPressMe;
     Button Touch;
+    Button Common;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +21,9 @@ public class Event_Handling extends AppCompatActivity implements View.OnClickLis
 
         Touch = (Button) findViewById(R.id.task2);
         Touch.setOnClickListener(this);
+
+        Common = (Button) findViewById(R.id.task3);
+        Common.setOnClickListener(this);
     }
     public void onClick(View v) {
         switch (v.getId()) {
@@ -31,6 +35,11 @@ public class Event_Handling extends AppCompatActivity implements View.OnClickLis
             case R.id.task2:
                 Intent intent1 = new Intent(this, Touch.class);
                 startActivity(intent1);
+                break;
+
+            case R.id.task3:
+                Intent intent2 = new Intent(this, Common.class);
+                startActivity(intent2);
                 break;
             default:
                 break;
