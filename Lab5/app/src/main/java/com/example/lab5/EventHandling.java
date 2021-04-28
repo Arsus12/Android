@@ -30,7 +30,7 @@ public class EventHandling extends AppCompatActivity {
                 break;
 
             case R.id.myButton2:
-                Intent intent1 = new Intent(this, ButtonPress.class);
+                Intent intent1 = new Intent(this, Touch.class);
                 startActivity(intent1);
                 break;
             default:
