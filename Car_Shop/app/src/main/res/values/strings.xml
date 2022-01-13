@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name" translatable="false">Car Shop</string>
+    <string name="information_about_element" translatable="false">Категория</string>
+</resources>
